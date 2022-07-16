@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        header {
+            background-image: url(donate5.jpg);
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.09); //transparent bg
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .intro {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        input[type=text],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical
+        }
+
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 30%;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+    </style>
+    <title>Payment Gateway Integration</title>
+</head>
+
+<body>
+    <header class="">
+        <nav class="flex justify-between items-center">
+            <img src="logo.png" class="h-14 w-14" alt="logo">
+            <div class="flex mr-4">
+                <p class="mx-4 text-xl font-bold font-mono text-white hover:cursor-pointer hover:underline">Home</p>
+                <p class="mx-4 text-xl font-bold font-mono text-white hover:cursor-pointer hover:underline">About</p>
+                <p class="mx-4 text-xl font-bold font-mono text-white hover:cursor-pointer hover:underline">Contact Us
+                </p>
+                <p class="mx-4 text-xl font-bold font-mono text-white hover:cursor-pointer hover:underline">Donate</p>
+            </div>
+        </nav>
+        <div class="flex flex-col mb-20 mt-16 mx-20 w-80 justify-center items-center intro rounded-md border-none">
+            <p class="text-white text-5xl mb-8 mt-4 font-bold font-mono ml-4 mr-2"> Donate for the Needy! </p>
+            <p class="text-white text-base font-bold ml-4 mr-2">Your little donation will bring smile to someone's lips,
+                medicine
+                to someone's house, food to someone's stomach and education for someone!! Think About it!</p>
+                <form class="my-6"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Ju54inDiuMKQvT" async> </script> </forms>
+        </div>
+    </header>
+    <div class="flex flex-col container w-96 mt-14">
+        <p class="font-mono font-bold text-3xl underline ml-24 mb-4">Contact Us</p>
+        <form>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <label for="subject" class="my-2">Subject</label>
+            <textarea class="my-2" id="subject" name="subject" placeholder="Write something.."
+                style="height:200px"></textarea>
+            <input type="submit" value="Submit" class="ml-28">
+        </form>
+    </div>
+    <footer class="bg-black text-white flex flex-col justify-center items-center h-12 mt-14">
+        <p>Copyright © 2022</p>
+    </footer>
+    </body>
+</html>
